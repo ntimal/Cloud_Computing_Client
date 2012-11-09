@@ -15,7 +15,7 @@ import com.sun.jersey.multipart.FormDataMultiPart;
 
 public class ResponseHandler {
 
-	private static final String HOST_REST = "http://sampleenv-ak4ivgmibz.elasticbeanstalk.com/rest/";
+	private static final String HOST_REST = "http://sampleenv-wsxps4vrvb.elasticbeanstalk.com/rest/";
 	private static final String VIDEO_CONVERTER = "converter/video";
 	
 	public static void videoConverter(Client c, String inputFileString,String outputFormat, ErrorInfo ei) {
