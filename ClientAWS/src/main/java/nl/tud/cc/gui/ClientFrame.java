@@ -93,7 +93,7 @@ public class ClientFrame extends JFrame implements ActionListener {
 			Client client = new Client();
 			ErrorInfo error = new ErrorInfo("");
 			statusLabel.setText(statusLabel.getText() + " Busy");
-			ResponseHandler.videoConverter(client, browseInputTextField.getText(), getFormat(), error);
+			//ResponseHandler.videoConverter(client, browseInputTextField.getText(), getFormat(), error);
 			statusLabel.setText("Status:" + " Done " + browseInputTextField.getText() + getFormat());
 		}
 	}

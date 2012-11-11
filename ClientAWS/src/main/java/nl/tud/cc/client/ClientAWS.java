@@ -17,12 +17,13 @@ public class ClientAWS {
 	public static void main(String[] args) {
 		
 		String inputFileString = args[0];
-		String outputFormat = args[1];
+		String outputFilePath = args[1];
+		String outputFormat = args[2];
 		
 		Client client = new Client();
 		ErrorInfo error = new ErrorInfo("");
 		
-		ResponseHandler.videoConverter(client, inputFileString, outputFormat, error);
+		ResponseHandler.videoConverter(client, inputFileString, outputFormat, outputFilePath, error);
 		
 		/*JFrame clientGUI = new ClientFrame();
 		clientGUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);*/

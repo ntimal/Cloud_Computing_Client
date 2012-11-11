@@ -19,7 +19,7 @@ public class ResponseHandler {
 	private static final String HOST_REST = "http://sampleenv-rgsp6v7g2y.elasticbeanstalk.com/rest/";
 	private static final String VIDEO_CONVERTER = "converter/video";
 	
-	public static void videoConverter(Client c, String inputFileString,String outputFormat, ErrorInfo ei) {
+	public static void videoConverter(Client c, String inputFileString,String outputFormat, String outputFilePath, ErrorInfo ei) {
 		
 		WebResource webResource = c.resource(HOST_REST + VIDEO_CONVERTER);
 		FormDataMultiPart fdmp = new FormDataMultiPart();
@@ -38,7 +38,8 @@ public class ResponseHandler {
 		int status = response.getStatus();
 		if(status == 200){
 			
-			File outputFile = new File(inputFileString + outputFormat);
+			//File outputFile = new File(inputFileString + outputFormat);
+			File outputFile = new File(outputFilePath + outputFormat);
 			try {
 				outputFile.createNewFile();
 				saveToFile(response.getEntityInputStream(),outputFile);
